@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 class SceneHandler {
   function handle(sceneFile, campaignState) {
+=======
+class SceneHandler{
+  function handle(scene, campaignState){
     var response = "";
-    var scene = JSON.parse(sceneFile);
     var handler;
 
     if (scene.description !== "" && campaignState.nextSceneAction === 0) {
@@ -9,7 +12,8 @@ class SceneHandler {
     }
 
     handler = new HandlerFactory().createHandler(scene.defaultActionChain[campaignState.nextSceneAction].targetType);
-    response += handler.handle(sceneFile, campaignState, scene.defaultActionChain[campaignState.nextSceneAction].targetID);
+    response += handler.handle(scene, campaignState, scene.defaultActionChain[campaignState.nextSceneAction].targetID);
+    campaignState.nextSceneAction++;
 
     return response;
   }
