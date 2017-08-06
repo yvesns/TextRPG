@@ -1,10 +1,10 @@
-class SceneHandler{
-  function handle(sceneFile, campaignState){
+class SceneHandler {
+  function handle(sceneFile, campaignState) {
     var response = "";
     var scene = JSON.parse(sceneFile);
     var handler;
 
-    if(scene.description !== "" && campaignState.nextSceneAction === 0){
+    if (scene.description !== "" && campaignState.nextSceneAction === 0) {
       response += scene.description + "\n\n";
     }
 
