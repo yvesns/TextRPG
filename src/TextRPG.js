@@ -1,10 +1,6 @@
 import 'SceneHandler';
 import 'ElementTypeEnum';
 
-<<<<<<< HEAD
-class TextRPG {
-  function processScene(sceneFile, campaignStateFile) {
-=======
 class TextRPG{
   function processScene(sceneFile, campaignStateFile){
     var scene = JSON.parse(sceneFile);

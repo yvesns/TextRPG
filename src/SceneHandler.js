@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-class SceneHandler {
-  function handle(sceneFile, campaignState) {
-=======
 class SceneHandler{
   function handle(scene, campaignState){
     var response = "";
