@@ -6,6 +6,6 @@ class TextRPG{
     var scene = JSON.parse(sceneFile);
     var campaignState = JSON.parse(campaignStateFile);
 
-    new HandlerFactory().createHandler(campaignState.elementType).handle(scene, campaignState);
+    return new HandlerFactory().createHandler(campaignState.elementType).handle(scene, campaignState);
   }
 }
