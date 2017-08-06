@@ -8,7 +8,8 @@ class SceneHandler{
     }
 
     handler = new HandlerFactory().createHandler(scene.defaultActionChain[campaignState.nextSceneAction].targetType);
-    response += handler.handle(sceneFile, campaignState, scene.defaultActionChain[campaignState.nextSceneAction].targetID);
+    response += handler.handle(scene, campaignState, scene.defaultActionChain[campaignState.nextSceneAction].targetID);
+    campaignState.nextSceneAction++;
 
     return response;
   }
