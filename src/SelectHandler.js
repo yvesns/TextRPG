@@ -20,11 +20,12 @@ class SelectHandler{
       });
     }
 
-    if(target.result === undefined){
+    if(target === undefined){
       //do nothing
     }
 
     handler = new HandlerFactory().createHandler(scene.defaultActionChain[campaignState.nextSceneAction].targetType);
     response += handler.handle(scene, campaignState, target);
+    return response;
   }
 }
