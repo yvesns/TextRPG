@@ -1,5 +1,5 @@
 class SceneHandler{
-  function handle(scene, campaignState){
+  function handle(scene, campaignState, id){
     var response = "";
     var handler;
 
