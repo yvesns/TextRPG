@@ -1,8 +1,16 @@
 class CombatHandler{
-  function handle(scene, campaignState, id){
+  this.scene;
+  this.campaignState;
+  this.combatID;
+  var ruleset;
+
+  function handle(scene, campaignState, combatID){
+    this.scene = scene;
+    this.campaignState = campaignState;
+    this.combatID = combatID;
     var response = "";
     var handler;
-    var ruleset = new DefaultRuleset();
+    ruleset = new DefaultRuleset();
 
     if(campaignState.element.id !== id){
       campaignState.element = {
@@ -13,9 +21,16 @@ class CombatHandler{
 
       campaignState.combat = {};
       campaignState.combat.enemies = buildEnemiesArray(scene.combats[id].enemies);
+      campaignState.combat.roundEnded = true;
+      compaignState.combat.nextActor = 0;
     }
 
+    response = handleRound();
+
     return response;
+  }
+
+  function handleRound(){
   }
 
   function buildEnemiesArray(sceneEnemies){

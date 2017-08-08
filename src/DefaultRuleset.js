@@ -1,7 +1,6 @@
 class DefaultRuleset{
-  function calculateInitiatives(scene, campaignState, combatID){
+  function calculateInitiatives(scene, campaignState, combatID, enemies){
     var combat = scene.combats[combatID];
-    var enemies = combat.enemies
     var players = campaignState.players;
     var dice = new Dice();
 
