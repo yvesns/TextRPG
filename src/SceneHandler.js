@@ -1,3 +1,5 @@
+var HandlerFactory = require('./HandlerFactory.js');
+
 class SceneHandler{
   function handle(scene, campaignState, id){
     var response = "";
@@ -14,3 +16,5 @@ class SceneHandler{
     return response;
   }
 }
+
+module.exports = SceneHandler;

@@ -3,3 +3,5 @@ var ElementTypeEnum = {
   SELECT:"select",
   COMBAT:"combat",
 };
+
+module.exports = ElementTypeEnum;

@@ -1,3 +1,5 @@
+var SceneHandler = require('./SceneHandler.js');
+
 class HandlerFactory{
   function createHandler(type){
     if(type == ElementTypeEnum.SCENE){
@@ -5,3 +7,5 @@ class HandlerFactory{
     }
   }
 }
+
+module.exports = HandlerFactory;

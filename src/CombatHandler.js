@@ -38,16 +38,19 @@ class CombatHandler{
 
     for(var i = 0; i < sceneEnemies.length; i++){
       while(sceneEnemies[i].quantity > 0){
-        enemies.push(copyEnemy(sceneEnemies[i]));
+        enemies.push(copyEnemy(sceneEnemies[i]), sceneEnemies[i].id + sceneEnemies[i].quantity);
+        sceneEnemies[i].quantity--;
       }
     }
   }
 
-  function copyEnemy(original){
+  function copyEnemy(original, newID){
     var copy = {
-      id: original.id,
+      id:newID,
     };
 
     return copy;
   }
 }
+
+module.exports = CombatHandler;

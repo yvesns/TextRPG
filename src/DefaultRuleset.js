@@ -37,3 +37,5 @@ class DefaultRuleset{
     }
   }
 }
+
+module.exports = DefaultRuleset;

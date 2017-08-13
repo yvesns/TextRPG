@@ -1,5 +1,4 @@
-import 'SceneHandler';
-import 'ElementTypeEnum';
+var HandlerFactory = require('./HandlerFactory.js');
 
 class TextRPG{
   function processScene(sceneFile, campaignStateFile){
@@ -9,3 +8,5 @@ class TextRPG{
     return new HandlerFactory().createHandler(campaignState.element.type).handle(scene, campaignState, campaignState.element.id);
   }
 }
+
+module.exports = TextRPG;

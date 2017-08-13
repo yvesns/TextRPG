@@ -29,3 +29,5 @@ class SelectHandler{
     return response;
   }
 }
+
+module.exports = SelectHandler;
