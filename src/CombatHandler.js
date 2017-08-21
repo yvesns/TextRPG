@@ -4,7 +4,7 @@ class CombatHandler{
   this.combatID;
   var ruleset;
 
-  function handle(scene, campaignState, combatID){
+  handle(scene, campaignState, combatID){
     this.scene = scene;
     this.campaignState = campaignState;
     this.combatID = combatID;
@@ -30,10 +30,10 @@ class CombatHandler{
     return response;
   }
 
-  function handleRound(){
+  handleRound(){
   }
 
-  function buildEnemiesArray(sceneEnemies){
+  buildEnemiesArray(sceneEnemies){
     var enemies = [];
 
     for(var i = 0; i < sceneEnemies.length; i++){

@@ -1,7 +1,7 @@
 var HandlerFactory = require('./HandlerFactory.js');
 
 class SceneHandler{
-  function handle(scene, campaignState, id){
+  handle(scene, campaignState, id){
     var response = "";
     var handler;
 

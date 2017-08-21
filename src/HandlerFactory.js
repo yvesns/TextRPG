@@ -1,7 +1,7 @@
 var SceneHandler = require('./SceneHandler.js');
 
 class HandlerFactory{
-  function createHandler(type){
+  createHandler(type){
     if(type == ElementTypeEnum.SCENE){
       return new SceneHandler();
     }

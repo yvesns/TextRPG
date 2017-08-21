@@ -1,5 +1,5 @@
 class Dice{
-  function roll(sides){
+  roll(sides){
     return Math.floor(Math.random() * sides) + 1;
   }
 }

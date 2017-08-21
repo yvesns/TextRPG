@@ -1,7 +1,7 @@
 var HandlerFactory = require('./HandlerFactory.js');
 
 class TextRPG{
-  function processScene(sceneFile, campaignStateFile){
+  processScene(sceneFile, campaignStateFile){
     var scene = JSON.parse(sceneFile);
     var campaignState = JSON.parse(campaignStateFile);
 
